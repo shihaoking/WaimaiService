@@ -6,6 +6,8 @@ import com.zhaishifu.service.db.service.ShopDBService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by shihaoking on 2015/11/30.
  */
@@ -18,6 +20,10 @@ public class ShopServiceImpl implements ShopService {
 
     public ShopEntity getShop(int shopId) {
         return shopDBService.getShop(shopId);
+    }
+
+    public List<ShopEntity> getShops(ShopEntity shopEntity){
+        return shopDBService.getShops(shopEntity);
     }
 
     public String getShopName(int shopId) {

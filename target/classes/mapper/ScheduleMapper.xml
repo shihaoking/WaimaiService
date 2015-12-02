@@ -21,4 +21,18 @@
     where Id = #{id,jdbcType=INTEGER}
   </select>
 
+    <select id="getShops" resultMap="BaseResultMap" parameterType="com.zhaishifu.service.db.model.ShopEntity">
+        SELECT
+        <include refid="Base_Column_List"></include>
+        FROM Shop
+        <where>
+            <if test="categoryId != -1">
+              AND CategoryId = #{categoryId}
+            </if>
+            <if test="name != null and name != ''">
+              AND Name LIKE CONCAT(CONCAT('%', ${name}),'%')
+            </if>
+        </where>
+    </select>
+
 </mapper>

@@ -7,6 +7,6 @@
 
 
     <bean class="org.springframework.remoting.jaxws.SimpleJaxWsServiceExporter">
-        <property name="baseAddress" value="http://10.14.3.35:8090/"></property>
+        <property name="baseAddress" value="http://192.168.1.4:8090/"></property>
     </bean>
 </beans>

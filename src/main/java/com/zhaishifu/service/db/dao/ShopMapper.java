@@ -9,4 +9,6 @@ import java.util.List;
  */
 public interface ShopMapper {
     ShopEntity getShop(int id);
+
+    List<ShopEntity> getShops(ShopEntity shopEntity);
 }

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import java.util.List;
 
 /**
  * Created by shihaoking on 2015/12/1.
@@ -24,5 +25,10 @@ public class ShopServiceEndPoint {
     @WebMethod
     public ShopEntity getShop(int id){
         return shopService.getShop(id);
+    }
+
+    @WebMethod
+    public List<ShopEntity> getShops(ShopEntity shopEntity){
+        return shopService.getShops(shopEntity);
     }
 }
