@@ -10,7 +10,16 @@ public class ShopEntity implements Serializable {
     private String name;
     private String address;
     private String phoneNumber;
+    private String imageUrl;
     private int categoryId;
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = "http://10.14.3.35:9000/Contents/ShopImages/" + imageUrl;
+    }
 
     public int getCategoryId() {
         return categoryId;
